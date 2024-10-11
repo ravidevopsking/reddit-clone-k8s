@@ -32,6 +32,15 @@ data "aws_subnets" "public" {
     values = [data.aws_vpc.default.id]
   }
 }
+#printing output
+output "default_vpc_id" {
+  value = data.aws_vpc.default.id
+}
+
+output "public_subnet_ids" {
+  value = data.aws_subnets.public.ids
+}
+
 #cluster provision
 resource "aws_eks_cluster" "example" {
   name     = "EKS_CLOUD"
