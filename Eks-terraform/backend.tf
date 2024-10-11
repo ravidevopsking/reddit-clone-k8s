@@ -6,3 +6,9 @@ terraform {
   }
 }
 
+#stage('Terraform init'){
+#            steps{
+#                 dir('Eks-terraform') {
+#                      sh 'terraform init -reconfigure'
+#                   }
+
